@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var runRoot = document.getElementById( 'run_root' );
   var runPingPong = document.getElementById( 'ping_pong' );
+  var runCount = document.getElementById( 'run_count' );
 
   runRoot.addEventListener('click', function() {
     $.ajax({
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   runPingPong.addEventListener('click', function() {
     $.ajax({
-      url: 'http://first-ajax-api.herokuapp.com/pong',
+      url: 'http://first-ajax-api.herokuapp.com/ping',
       method: 'GET',
       // data: '',
       dataType: 'text',
@@ -34,10 +35,19 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(jqXHR.responseText);
       console.log(textStatus);
       document.getElementById('step3456').append(errorMsg);
-
     }).always(function() {
       console.log('Request completed!');
     })
   });
+
+  runCount.addEventListener('click', function() {
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/count',
+      method: 'GET',
+      dataType: 'text',
+    }) .done(function(responseData) {
+      console.log(responseData);
+    });
+  })
 
 });

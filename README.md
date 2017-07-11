@@ -34,3 +34,34 @@ content : Wow what a ride! I came all the way from the server!
 ##Step 4 - When Things Go Wrong...
 
 3. new status code- 500 - Internal Server Error
+
+
+##Step 6 - All Together Now!
+
+/pong - Status Code 500, type xhr; initiator jquery.min.js; time 233ms;
+
+#console messages:
+send @ jquery.min.js:4
+ajax @ jquery.min.js:4
+(anonymous) @ ajax.js:18
+jquery.min.js:4 XHR finished loading: GET "http://first-ajax-api.herokuapp.com/pong".
+send @ jquery.min.js:4
+ajax @ jquery.min.js:4
+(anonymous) @ ajax.js:18
+##ajax.js:30 POST FAILED
+ajax.js:33 Object {readyState: 4, getResponseHeader: function, getAllResponseHeaders: function, setRequestHeader: function, overrideMimeType: function…}
+##ajax.js:34 I'm sorry, Dave. I'm afraid I can't do that.
+##ajax.js:35 error
+##ajax.js:39 Request completed!
+
+/ping - status code 200; ping-  xhr; initiator;  jquery.min.js; ping took 85ms
+
+#console messages:
+#ajax.js:24 Wow what a ride! I came all the way from the server!
+#ajax.js:38 Request completed!
+
+
+##Step 7 - The Hive Mind (Shared State)
+
+number of times count page visited by Bitmakers: 38038
+refreshed and clicked again to confirm working
