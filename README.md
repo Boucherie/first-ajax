@@ -65,3 +65,17 @@ ajax.js:33 Object {readyState: 4, getResponseHeader: function, getAllResponseHea
 
 number of times count page visited by Bitmakers: 38038
 refreshed and clicked again to confirm working
+
+##Step 9 - Receiving HTML in the Response
+
+Investigate the Request and Response "Headers" in your Network Tab. What is the 'Accepts' of the Request, and the 'Content-Type' of the response?
+
+Response Headers:
+Accept-Ranges:bytes
+
+Request Headers:
+Accept:*/*
+Accept-Encoding:gzip, deflate, sdch, br
+Accept-Language:en-US,en;q=0.8
+
+Content-Type: text/javascript; charset=UTF-8

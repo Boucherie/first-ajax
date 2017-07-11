@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var runPingPong = document.getElementById( 'ping_pong' );
   var runCount = document.getElementById( 'run_count' );
   var runTime = document.getElementById( 'run_time' );
+  var runCar = document.getElementById( 'run_car' );
 
   runRoot.addEventListener('click', function() {
     $.ajax({
@@ -64,4 +65,18 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById('step8').append(currentTime);
     });
   });
+
+  runCar.addEventListener('click', function() {
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/a_car',
+      method: 'GET',
+      dataType: 'html',
+    }).done(function(responseData){
+      var newList = document.createElement('ul');
+      newList.id = 'new_list';
+      document.getElementById('step9').append(newList);
+      newList.innerHTML = responseData;
+    });
+  })
+
 });
