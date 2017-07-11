@@ -25,3 +25,8 @@ normal browser request
 5. Method: GET     Status: 200 OK (73ms)
 
 6. Type:  document      Initiator: other (same as before)
+
+
+##Step 3 - Using Information in the Response
+
+content : Wow what a ride! I came all the way from the server!
